@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!</title>
+    <link rel="icon" type="image/x-icon" href="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/logo_lite-cbb357.png">
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Main Flipkart Stylesheet -->
+    <link rel="stylesheet" href="css/flipkart.css">
+</head>
+<body>
+
+    <!-- ====================================================================
+         FLIPKART HEADER
+         ==================================================================== -->
+    <header class="fk-header">
+        <div class="fk-header-container">
+            
+            <!-- Flipkart Logo -->
+            <div class="fk-logo-wrapper" onclick="window.Store.setView('home')" title="Flipkart Home">
+                <span class="fk-logo-main">Flipkart</span>
+                <span class="fk-logo-sub">
+                    Explore <span class="plus-gold">Plus</span>
+                    <span class="plus-star">★</span>
+                </span>
+            </div>
+
+            <!-- Search Bar with Live Suggestions Dropdown -->
+            <div class="fk-search-wrapper">
+                <div class="fk-search-box">
+                    <input type="text" id="header-search-input" class="fk-search-input" placeholder="Search for Products, Brands and More" autocomplete="off">
+                    <button class="fk-search-btn" onclick="window.App.triggerSearch()" title="Search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Autocomplete suggestions container -->
+                <div id="header-search-suggestions" class="fk-search-suggestions"></div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <nav class="fk-nav-actions">
+                <!-- User Account / Login Wrapper -->
+                <div id="header-user-wrapper"></div>
+
+                <!-- Become a Seller Link -->
+                <span class="fk-nav-link" onclick="window.App.showToast('Seller registration portal simulation')">
+                    Become a Seller
+                </span>
+
+                <!-- Cart Button -->
+                <div class="fk-cart-btn" onclick="window.Store.setView('cart')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span>Cart</span>
+                    <span id="header-cart-badge" class="fk-cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ====================================================================
+         CATEGORIES NAVIGATION BAR
+         ==================================================================== -->
+    <nav class="fk-categories-bar">
+        <div id="categories-bar-container" class="fk-categories-container"></div>
+    </nav>
+
+    <!-- ====================================================================
+         DYNAMIC MAIN VIEW CONTAINER
+         ==================================================================== -->
+    <main id="main-view-container" class="fk-main-content">
+        <!-- Content will be injected dynamically by App router -->
+    </main>
+
+    <!-- ====================================================================
+         FLIPKART FOOTER
+         ==================================================================== -->
+    <footer class="fk-footer">
+        <div class="fk-footer-top">
+            <div>
+                <div class="fk-footer-col-title">ABOUT</div>
+                <ul class="fk-footer-links">
+                    <li><a href="#" onclick="return false;">Contact Us</a></li>
+                    <li><a href="#" onclick="return false;">About Us</a></li>
+                    <li><a href="#" onclick="return false;">Careers</a></li>
+                    <li><a href="#" onclick="return false;">Flipkart Stories</a></li>
+                    <li><a href="#" onclick="return false;">Corporate Information</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="fk-footer-col-title">GROUP COMPANIES</div>
+                <ul class="fk-footer-links">
+                    <li><a href="#" onclick="return false;">Myntra</a></li>
+                    <li><a href="#" onclick="return false;">Cleartrip</a></li>
+                    <li><a href="#" onclick="return false;">Shopsy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="fk-footer-col-title">HELP</div>
+                <ul class="fk-footer-links">
+                    <li><a href="#" onclick="return false;">Payments</a></li>
+                    <li><a href="#" onclick="return false;">Shipping</a></li>
+                    <li><a href="#" onclick="return false;">Cancellation & Returns</a></li>
+                    <li><a href="#" onclick="return false;">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="fk-footer-col-title">CONSUMER POLICY</div>
+                <ul class="fk-footer-links">
+                    <li><a href="#" onclick="return false;">Terms Of Use</a></li>
+                    <li><a href="#" onclick="return false;">Security</a></li>
+                    <li><a href="#" onclick="return false;">Privacy</a></li>
+                    <li><a href="#" onclick="return false;">Sitemap</a></li>
+                    <li><a href="#" onclick="return false;">Grievance Redressal</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="fk-footer-col-title">MAIL US:</div>
+                <p style="color: #ffffff; line-height: 1.6; font-size: 12px;">
+                    Flipkart Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103, Karnataka, India
+                </p>
+            </div>
+        </div>
+
+        <div class="fk-footer-bottom">
+            <div>© 2007-2026 Flipkart.com</div>
+            <div>⚡ 100% Original Products | Free Delivery | Secure Payments</div>
+        </div>
+    </footer>
+
+    <!-- ====================================================================
+         LOGIN / SIGNUP MODAL
+         ==================================================================== -->
+    <div id="login-modal-overlay" class="fk-modal-overlay">
+        <div class="fk-modal fk-login-modal">
+            <button class="fk-modal-close-btn" onclick="window.AuthModal.close()">✕</button>
+            
+            <div class="fk-login-sidebar">
+                <div>
+                    <h2 class="fk-login-side-title">Login</h2>
+                    <p class="fk-login-side-desc">Get access to your Orders, Wishlist and Recommendations</p>
+                </div>
+                <div style="font-size: 48px; opacity: 0.85;">🛍️</div>
+            </div>
+
+            <div class="fk-login-form-area">
+                <div class="fk-input-group">
+                    <input type="text" id="login-input-phone" class="fk-floating-input" placeholder="Enter Email/Mobile number" value="9876543210">
+                </div>
+
+                <div id="login-otp-section" class="fk-otp-box">
+                    <span>Simulated OTP sent: </span>
+                    <strong id="otp-mock-display" style="letter-spacing: 2px;">4826</strong>
+                    <div style="margin-top: 8px;">
+                        <input type="text" id="login-input-otp" placeholder="Enter 4-digit OTP" maxlength="4" style="padding: 6px 10px; border: 1px solid #c8e6c9; border-radius: 4px; width: 140px; font-weight: 700;">
+                    </div>
+                </div>
+
+                <p style="font-size: 12px; color: var(--fk-text-secondary); margin-bottom: 24px;">
+                    By continuing, you agree to Flipkart's <a href="#" style="color: var(--fk-blue);">Terms of Use</a> and <a href="#" style="color: var(--fk-blue);">Privacy Policy</a>.
+                </p>
+
+                <button id="login-submit-btn" class="fk-btn-continue" onclick="window.AuthModal.handleSubmit()">
+                    Request OTP
+                </button>
+
+                <button class="fk-btn-change-addr" onclick="window.AuthModal.close()" style="border: none; color: var(--fk-blue); margin-top: 12px;">
+                    New to Flipkart? Create an account
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         ADD NEW ADDRESS MODAL
+         ==================================================================== -->
+    <div id="address-modal-overlay" class="fk-modal-overlay">
+        <div class="fk-modal" style="width: 560px; padding: 24px;">
+            <button class="fk-modal-close-btn" onclick="window.AddressModal.close()">✕</button>
+            <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--fk-blue);">Add Delivery Address</h2>
+            
+            <form onsubmit="window.AddressModal.save(event)">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                    <input type="text" id="addr-name" placeholder="Full Name *" required style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;">
+                    <input type="tel" id="addr-phone" placeholder="10-digit mobile number *" maxlength="10" required style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                    <input type="text" id="addr-pincode" placeholder="Pincode *" maxlength="6" required style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;">
+                    <input type="text" id="addr-locality" placeholder="Locality" style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;">
+                </div>
+
+                <div style="margin-bottom: 14px;">
+                    <textarea id="addr-street" placeholder="Address (Area and Street) *" required rows="3" style="width: 100%; padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;"></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;">
+                    <input type="text" id="addr-city" placeholder="City/District/Town *" required style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;" value="New Delhi">
+                    <input type="text" id="addr-state" placeholder="State *" required style="padding: 10px; border: 1px solid var(--fk-border); border-radius: 4px;" value="Delhi">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 13px; color: var(--fk-text-secondary); margin-right: 14px;">Address Type:</span>
+                    <label style="margin-right: 14px; font-size: 13px; cursor: pointer;">
+                        <input type="radio" name="addr_type" value="Home" checked> Home
+                    </label>
+                    <label style="font-size: 13px; cursor: pointer;">
+                        <input type="radio" name="addr_type" value="Work"> Work
+                    </label>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                    <button type="button" class="fk-btn-change-addr" onclick="window.AddressModal.close()">Cancel</button>
+                    <button type="submit" class="fk-btn-continue" style="margin-bottom: 0;">Save & Deliver Here</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         JAVASCRIPT MODULES LOAD
+         ==================================================================== -->
+    <script src="js/data/products.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/components/productCard.js"></script>
+    <script src="js/components/bannerSlider.js"></script>
+    <script src="js/components/filterSidebar.js"></script>
+    <script src="js/components/productDetail.js"></script>
+    <script src="js/components/cartView.js"></script>
+    <script src="js/components/checkoutView.js"></script>
+    <script src="js/components/ordersView.js"></script>
+    <script src="js/components/wishlistView.js"></script>
+    <script src="js/components/authModal.js"></script>
+    <script src="js/components/addressModal.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
